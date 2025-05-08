@@ -8,6 +8,7 @@ import InteractiveMap from "./dashboard/InteractiveMap";
 import EquipmentTable from "./dashboard/EquipmentTable";
 import EmployeeGrid from "./dashboard/EmployeeGrid";
 import NotificationPanel from "./dashboard/NotificationPanel";
+import MachineUsageGraph from "./dashboard/MachineUsageGraph";
 
 const Home = () => {
   // Mock data for key performance metrics
@@ -111,7 +112,7 @@ const Home = () => {
                         {metrics.operators.active} Active
                       </Badge>
                       <Badge
-                        variant="warning"
+                        variant="outline"
                         className="bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
                       >
                         {metrics.operators.overtime} Overtime
@@ -160,6 +161,9 @@ const Home = () => {
                 <InteractiveMap />
               </CardContent>
             </Card>
+
+            {/* Machine Usage Graph */}
+            <MachineUsageGraph />
 
             {/* Tabs for Equipment and Employee data */}
             <Tabs defaultValue="equipment" className="w-full">
